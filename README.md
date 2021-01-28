@@ -19,11 +19,11 @@ All of these examples are available in the notebook: `notebooks/Comparison.ipynb
 
 <b>Source </b>: min stadtrat rief sogar an und sagte , dass sie es unterstützen und lieben , was wir tun. 
 
-<b>Expected translation </b>: my councilman even called in and said how they endorse and love what we 're doing .
-
 Bahdanau RNN translation: my hometown of even said , and said that it's about it, and you know what we do. (First image)
 
 Transformer translation: my boss would even shouting and said that they're sponsoring and they're doing what we do. (Second image)
+
+<b>Expected translation </b>: my councilman even called in and said how they endorse and love what we 're doing .
 
 ![First phrase](image/1.gif)
 
@@ -31,11 +31,11 @@ Transformer translation: my boss would even shouting and said that they're spons
 
 <b>Source </b>: damals wussten wir noch nicht , wie sehr diese reisen unser leben verändern würden . 
 
-<b>Expected translation </b>: back then , we had no idea how much this trip would change our lives .
-
 Bahdanau RNN translation: we didn't even know how much these things were going to change our lives. (First image)
 
 Transformer translation: and then we didn't know how much these journeys of our lives. (Second image)
+
+<b>Expected translation </b>: back then , we had no idea how much this trip would change our lives .
 
 ![First phrase](image/2.gif)
 
@@ -43,11 +43,11 @@ Transformer translation: and then we didn't know how much these journeys of our 
 
 <b>Source </b>: löwen fürchten sich vor licht , das sich bewegt . 
 
-<b>Expected translation </b>: and i discovered that lions are afraid of a moving light .
-
 Bahdanau RNN translation: lions fear of light, that moves. <unk\> . (First image)
 
 Transformer translation: lions can be afraid of light that moves. (Second image)
+
+<b>Expected translation </b>: and i discovered that lions are afraid of a moving light .
 
 ![First phrase](image/3.gif)
 
@@ -58,8 +58,9 @@ To train the model, and run the code on your computer:
 
     1. Clone the code
     2. py download_dataset.py  #Download the dataset (original link doesn't work)
-    3. py train-bahdanau-translator.py  (Train the RNN model)
-    4. py train-transformer-translator.py (Train the Transformer)
+    3. py train-bahdanau-translator.py  #(Train the RNN model)
+    4. py train-transformer-translator.py #(Train the Transformer)
+    5. Open Comparison.ipynb to visualize attention weights and compare translations
 
 You can take a look at the training code either in a jupyter notebook, or under `src/*` in a python file. The file `config.yaml` to configure the size of the model, and the important hyper-paramters of both models.
 
