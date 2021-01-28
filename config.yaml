@@ -5,6 +5,7 @@ epochs: 30
 rnn_batch_size: 64
 transformer_batch_size: 128
 
+rnn_lr: 0.0003
 
 #Vocabulary paramaters
 training_phrases_max_len: 25 

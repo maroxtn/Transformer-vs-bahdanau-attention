@@ -67,7 +67,7 @@ MAX_LEN = config["training_phrases_max_len"]
 
 
 
-train_data, valid_data, test_data = IWSLT.splits(
+train_data, valid_data, test_data = IWSLT.splits(root="../data",
         exts=("."+CFG["IN_LANG"], "."+CFG["OUT_LANG"]), fields=(in_lang, out_lang ),filter_pred=lambda x: len(vars(x)['src']) <= MAX_LEN and 
             len(vars(x)['trg']) <= MAX_LEN)
 
