@@ -1,9 +1,9 @@
 Attention Weights Comparison
 ==============================
 
-In this project, I tried to compare Bahdanau attention against Transformer's attention. To do that, I trained a Transformer model and a GRU based encoder decoder that uses Bahdanau attention on the same dataset, with roughly the same network size, and same number of epochs. After that, I compared the attention weights that each model produces for the same phrase.
+In this project, I tried to compare Bahdanau attention against Transformer's attention. To do that, I trained a Transformer model and a GRU based encoder decoder that uses Bahdanau attention on the same dataset, with roughly the same network size, and same number of epochs. Using these trained models, I compared attention weights produced by them for the same input sentence.
 
-Needless to say the Transformer performed slighly better than the RNN model, but it could've performer even better if it wasn't for the limitation in its hyperparameters (1 layer, 1 attention head).
+Needless to say that the Transformer performed slighly better than the RNN model, but it could've performer even better if it wasn't for the limitation in its hyperparameters (1 layer, 1 attention head).
 
 The hyperparameters were constrained so a proper comparision in attention weights would be possible. It would be hard for example to see the difference between the attention weights of the two models if the Transformer had more than one attention head, or if it had more than one layer. You can take a look at the hyper-parameters in `config.yaml`.
 
