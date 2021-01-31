@@ -1,19 +1,19 @@
-Translation Comparison
+Attention Weights Comparison
 ==============================
 
-In this project I try to compare Bahdanau attention with attention mechanisms in Transformer. To do that, I trained a Transformer and a GRU RNN on the same dataset, with roughly the same network size, and same number of epochs, then compare the attention weights on the same phrase.
+In this project, I tried to compare Bahdanau attention against Transformer's attention. To do that, I trained a Transformer model and a GRU based encoder decoder that uses Bahdanau attention on the same dataset, with roughly the same network size, and same number of epochs. After that, I compared the attention weights that each model produces for the same phrase.
 
-Needless to say the Transformer performed slighly better than the RNN model, but it could've performer even better if it wasn't due to the limitation in its hyperparameters (1 layer, 1 attention head).
+Needless to say the Transformer performed slighly better than the RNN model, but it could've performer even better if it wasn't for the limitation in its hyperparameters (1 layer, 1 attention head).
 
-The hyperparameters were limited so a proper comparision in attention weights would be possible, otherwise attention weights would be distributed on all attention heads, and RNN would only have one attention head. 
+The hyperparameters were constrained so a proper comparision in attention weights would be possible. It would be hard for example to see the difference between the attention weights of the two models if the Transformer had more than one attention head, or if it had more than one layer. You can take a look at the hyper-parameters in `config.yaml`.
 
-Check the notebooks to go through the training step by step, and to see the comparison. I am going to upload each model training with validation / beam search / and metrics on a different repo soon. Also, tomorrow, I will add the heatmap of the attention weights below.
+In the notebooks folder, I included notebooks that go through the training of the two models step by step. 
 
 # <b> Example results: </b>
 
-<h3><b>Notes</b></h3> All letters are lowercase, also the quality of the translation wouldn't be great since I limited the model size and the dataset (IWSLT) is relatively small. This is more done for the sake of comparison.
+<h3><b>Notes</b></h3> All letters are lowercase. The quality of the translation is not the best since the models and the dataset (IWSLT) are relatively small. This is merely done for the sake of comparison.
 
-All of these examples are available in the notebook: `notebooks/Comparison.ipynb`, you can also try your own examples. You don't need to train the models, they are already trained in `models/*`
+All of these examples are available in the notebook: `notebooks/Comparison.ipynb`. You are welcome to try your own examples. You don't need to train the models, they are already trained in `models/*`
 
 &nbsp;
 
@@ -62,7 +62,6 @@ To train the model, and run the code on your computer:
     4. py train-transformer-translator.py #(Train the Transformer)
     5. Open Comparison.ipynb to visualize attention weights and compare translations
 
-You can take a look at the training code either in a jupyter notebook, or under `src/*` in a python file. The file `config.yaml` to configure the size of the model, and the important hyper-paramters of both models.
+You can take a look at the training code either in a jupyter notebook, or under `src/*` in a python file. Use the file `config.yaml` to configure the size of the model, and the hyper-paramters of both models.
 
-All contributions are welcomed :) !
-
+Hope you find this interesting!
